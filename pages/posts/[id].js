@@ -27,7 +27,7 @@ export async function getStaticProps({ params }) {
   const postData = getPostData(params.id);
   return {
     props: {
-      postData,
+      postData: JSON.parse(JSON.stringify(postData)),
     },
   };
 }
